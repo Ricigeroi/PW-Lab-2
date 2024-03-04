@@ -1,24 +1,75 @@
-ul {
-  list-style-type: none;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #333;
+  box-sizing: border-box;
 }
 
-li {
-  float: left;
+body {
+  background: #eaeaea;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 8%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  color: #222;
   text-decoration: none;
+  font-weight: 600;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
+.navbar a {
+  font-size: 18px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 20px;
+  transition: .3s;
+}
+
+.navbar a:hover, .navbar a.active {
+  color: #1743e3;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  height: 40px;
+}
+
+.social-media a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  text-decoration: none;
+  transform:  rotate(45deg);
+}
+
+.social-media a:hover {
+  border-color: red;
+
+}
+
+.social-media a i {
+  font-size: 24px;
+  color: red;
+  transform: rotate(-45deg);
 }
