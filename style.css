@@ -153,7 +153,7 @@ body {
 .about {
   position: relative;
   min-height: 100vh;
-  padding: 50px 50px;
+  padding: 200px 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -333,6 +333,28 @@ body {
 }
 
 
+.character {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: -15px;
+  padding: 0;
+  z-index: 1000;
+  width: 157px;
+}
+
+.character p {
+  font-weight: 600;
+  text-align: center;
+  width: 80%;
+  font-size: 12px;
+}
+
+.character img {
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 1660px){
   .header {
     padding: 10px 3%;
@@ -357,6 +379,11 @@ body {
     font-size: 25px;
     color: #1743e3;
     transition: .5s;
+  }
+
+  .about {
+    padding: 50px 50px;
+    transition: .6s;
   }
 }
 

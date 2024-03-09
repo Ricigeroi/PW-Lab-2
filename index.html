@@ -155,7 +155,55 @@
     </div>
   </section>
 
+  <div id="character" class="character">
+    <p id="popup-message" style="display: none;">Hello! We are waiting for your message!</p>
+    <img src="res/mascot.png">
+  </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var delay = 50;
+      var characterElement = document.getElementById('character');
+      var messageElement = document.getElementById('popup-message');
+      var characterImage = document.querySelector('.character img');
+  
+      // Add a new image source for the hover effect
+      var newImageSrc = 'res/mascot_blink.png';
+  
+      setTimeout(function () {
+        characterElement.style.display = 'block';
+
+        characterElement.addEventListener('mouseenter', function () {
+          messageElement.style.display = 'block';
+  
+          // First blink
+          characterImage.src = newImageSrc;
+  
+          setTimeout(function () {
+            characterImage.src = 'res/mascot.png';
+
+            // Second blink after a short delay
+            setTimeout(function () {
+              characterImage.src = newImageSrc;
+
+              setTimeout(function () {
+                characterImage.src = 'res/mascot.png';
+              }, 150);
+            }, 150);
+          }, 150);
+        });
+  
+        characterElement.addEventListener('mouseleave', function () {
+          // Hide the message when the mouse leaves
+          messageElement.style.display = 'none';
+        });
+      }, delay);
+    });
+</script>
+
+  
+  
+  
 </body>
 
 </html>
